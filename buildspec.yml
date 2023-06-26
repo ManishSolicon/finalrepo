@@ -3,7 +3,6 @@ env:
     variables:
         CACHE_CONTROL: "86400"
         S3_BUCKET: ""
-        BUILD_FOLDER: "dist"
         BUILD_ENV: "prod"
 phases:
  install:
@@ -20,5 +19,5 @@ build:
 artifacts:
     files:
         - '**/*'
-    base-directory:
+    base-directory: 'dist*'
     discard-paths: yes
